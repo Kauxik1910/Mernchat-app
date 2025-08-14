@@ -1,8 +1,10 @@
 import express from 'express';
 import chats from './data.js'; // Importing the chat data   
 import dotenv from 'dotenv';       
+import connectDB from './config/db.js';
 dotenv.config(); // Load environment variables from .env file  
 
+connectDB();
 const app= express();
 const port=process.env.PORT || 5000;
 
